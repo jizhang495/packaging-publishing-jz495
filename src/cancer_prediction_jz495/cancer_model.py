@@ -78,7 +78,6 @@ class CancerModel:
             self.scaler = self.model.named_steps['scaler']
             self.feature_names = self.model.feature_names_in_
 
-
     def target_to_diagnosis(self, target: int) -> str:
         """Convert the target to a diagnosis.
 
