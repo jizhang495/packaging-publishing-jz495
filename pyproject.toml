@@ -5,6 +5,7 @@ description = "A basic cancer prediction model"
 authors = [{name="Ji Zhang"}]
 requires-python = ">=3.11"
 dependencies = [
+    "click>=8.3.0",
     "ipykernel>=6.29.5",
     "matplotlib>=3.7.5",
     "numpy>=1.24.4",
@@ -18,3 +19,13 @@ dev = [
     "flake8>=7.3.0",
     "isort>=7.0.0",
 ]
+
+[project.scripts]
+cancer-prediction = "cancer_prediction_jz495.scripts.app:cli"
+
+[build-system]
+requires = ["uv_build>=0.9.5,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+package = true
